@@ -2,7 +2,7 @@
 {
     internal class ChatServer
     {
-        List<ChatClient> _clients;
+        readonly List<ChatClient> _clients;
 
         public ChatServer()
         {
@@ -15,7 +15,7 @@
             {
                 if (chatClient != client)
                 {
-                    chatClient.Recieve(message);
+                    chatClient.Receive(message);
                 }
             }
         }

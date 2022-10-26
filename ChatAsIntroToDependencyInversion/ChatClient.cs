@@ -2,8 +2,8 @@
 {
     internal class ChatClient
     {
-        private string _name;
-        private ChatServer _server;
+        private readonly string _name;
+        private readonly ChatServer _server;
 
         public ChatClient(string name, ChatServer server)
         {
@@ -18,7 +18,7 @@
             ;
         }
 
-        public void Recieve(string message)
+        public void Receive(string message)
         {
             Console.WriteLine($"{_name} mottok: {message}");
         }
