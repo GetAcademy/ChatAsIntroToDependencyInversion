@@ -11,9 +11,12 @@
 
         public void Broadcast(ChatClient client, string message)
         {
-            foreach (var chatClient in _clients.Where(chatClient => chatClient != client))
+            foreach (var chatClient in _clients)
             {
-                chatClient.Recieve(message);
+                if (chatClient != client)
+                {
+                    chatClient.Recieve(message);
+                }
             }
         }
 
