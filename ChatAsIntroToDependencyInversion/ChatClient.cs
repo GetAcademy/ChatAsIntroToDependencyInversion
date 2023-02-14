@@ -15,12 +15,11 @@
         public void Say(string message)
         {
             _server.Broadcast(this, $"{_name} sier {message}.");
-            ;
         }
 
         public void Receive(string message)
         {
-            Console.WriteLine($"{_name} mottok: {message}");
+            Console.WriteLine($"Logg fra {_name} sin klient - mottok: {message}");
         }
     }
 }
